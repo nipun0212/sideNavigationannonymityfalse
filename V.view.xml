@@ -1,0 +1,70 @@
+<mvc:View
+              controllerName="sap.tnt.sample.SideNavigation.V"
+              xmlns:mvc="sap.ui.core.mvc"
+              xmlns="sap.tnt"
+              xmlns:m="sap.m"
+              height="100%"
+              class="side-navigation-demo">
+              <ToolPage>
+              <header>
+              <ToolHeader>
+              <m:Button id="toggleButton" text="Toggle Collapse/Expand"
+                                             icon="sap-icon://menu2"
+                                             press="onCollapseExpandPress" />
+              </ToolHeader>
+              </header>
+              <sideContent>
+              <SideNavigation id="sideNavigation" selectedKey="subItem3" >
+                             <item>
+                                           <NavigationList width="auto">
+                                                          <NavigationListItem
+                                                                        text="Item 1"
+                                                                        icon="sap-icon://employee">
+                                                                        <NavigationListItem text="Sub Item 1"/>
+                                                                        <NavigationListItem text="Sub Item 2"/>
+                                                                        <NavigationListItem text="Sub Item 3" id="subItem3" key="subItem3"/>
+                                                                        <NavigationListItem text="Sub Item 4" />
+                                                          </NavigationListItem>
+                                                          <NavigationListItem
+                                                                        text="Item 2"
+                                                                        icon="sap-icon://building">
+                                                                        <NavigationListItem text="Sub Item 1" />
+                                                                        <NavigationListItem text="Sub Item 2" />
+                                                                        <NavigationListItem text="Sub Item 3" />
+                                                                        <NavigationListItem text="Sub Item 4" />
+                                                          </NavigationListItem>
+                                           </NavigationList>
+                             </item>
+                             <fixedItem>
+                                           <NavigationList>
+                                                          <NavigationListItem text="Item 1" icon="sap-icon://employee"/>
+                                                          <NavigationListItem text="Item 2" icon="sap-icon://building"/>
+                                                          <NavigationListItem text="Item 3" icon="sap-icon://card"/>
+                                           </NavigationList>
+                             </fixedItem>
+              </SideNavigation>
+              </sideContent>
+              <mainContents>
+                             <m:NavContainer id="pageContainer" initialPage="page1">
+                                           <m:pages>
+                                                          <m:ScrollContainer
+                                                                        id="page1"
+                                                                        horizontal="false"
+                                                                        vertical="true"
+                                                                        height="100%">
+                                                                        <m:Text text="Enable or disable tracking" />
+                                                                        <m:ToolbarSpacer width="20px" />
+                                                                        <m:Button id = "enableTracking" text="Enable Tracking"
+                                                                                      icon="sap-icon://accept"
+                                                                                      press="enableTracking" />
+                                                                        <m:ToolbarSpacer width="20px" />
+                                                                        <m:Button id = "disbaleTracking" text="Disable Tracking"
+                                                                          icon="sap-icon://sys-cancel"
+                                                                          press="disableTracking" />
+                                                          </m:ScrollContainer>
+                                           </m:pages>
+                             </m:NavContainer>
+              </mainContents>
+              </ToolPage>
+</mvc:View>
+ 
