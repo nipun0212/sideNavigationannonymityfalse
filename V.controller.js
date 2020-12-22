@@ -19,8 +19,8 @@ sap.ui.define([
                                            var bExpanded = oSideNavigation.getExpanded();
  
                                            oSideNavigation.setExpanded(!bExpanded);
-                                           null.lengh();
-                                           1/0;
+                                        //    null.lengh();
+                                        //    1/0;
                              },
  
                              onHideShowSubItemPress: function () {

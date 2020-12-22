@@ -1,0 +1,7 @@
+---
+applications:
+
+- name: nipun-web
+  memory: 1024M
+  health-check-type: none
+  buildpack: staticfile_buildpack

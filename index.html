@@ -1,100 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Side Navigation</title>
 
-	<script id="sap-ui-bootstrap"
-		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
-		data-sap-ui-resourceroots='{
+	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_belize" data-sap-ui-resourceroots='{
 			"sap.tnt.sample.SideNavigation": "./",
 			"sap.ui.demo.mock": "mockdata"
-		}'
-		data-sap-ui-compatVersion="edge"
-		data-sap-ui-async="true"
-		data-sap-ui-frameOptions="trusted"
+		}' data-sap-ui-compatVersion="edge" data-sap-ui-async="true" data-sap-ui-frameOptions="trusted"
 		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
-	</script>
+		</script>
 <script>
     var swa = {
-        pubToken: '63f4299d-317e-f669-e1f9-22189dc17f39',
-        baseUrl: 'http://localhost:8081/tracker/',
-        /*Please provide function name which will return owner info or string value of owner info*/
-        owner: 'nipun'
+        pubToken: '8fd4954f-28d4-4753-9d13-112159a2d85a',
+        baseUrl: 'https://events-tracker.cfapps.sap.hana.ondemand.com/tracker/',
+        owner: null, 
+        //set this to a function that returns the identifier of the tracked user
     };
     (function(){
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/privacy.js';
+        g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/track.js';
         s.parentNode.insertBefore(g,s);
      })();
 </script>
-<!--<script>-->
-<!--    var swa = {-->
-<!--        pubToken: '7f2359d9-cdef-558e-c065-3752b06d2fae',-->
-<!--        baseUrl: 'https://webanalyticspreprod.cfapps.eu10.hana.ondemand.com/tracker/',-->
-        /*Please provide function name which will return owner info or string value of owner info*/
-<!--        owner: 'nipun',-->
-<!--        consentStyle: 'popup',-->
-<!--        consentOnLoad: true-->
-<!--    };-->
-<!--    (function(){-->
-<!--        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];-->
-<!--        g.type='text/javascript'; g.defer=true; g.async=true; g.src=swa.baseUrl+'js/privacy.js';-->
-<!--        s.parentNode.insertBefore(g,s);-->
-<!--     })();-->
-<!--</script>-->
-<!--<script>-->
-<!--    var swa = {-->
-<!--        pubToken: 'daca5408-2bea-4572-97d0-a9151f34fb13',-->
-<!--        baseUrl: 'https://events-integration.cfapps.sap.hana.ondemand.com/tracker/',-->
-<!--        owner: 'annonymityFalse',-->
-        
-        //set this to a function that returns the identifier of the tracked user
-<!--    };-->
-<!--    (function(){-->
-<!--        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];-->
-<!--        g.type='text/javascript'; g.defer=true; g.async=true; g.src='./track.js';-->
-<!--        s.parentNode.insertBefore(g,s);-->
-<!--     })();-->
-<!--</script>-->
-// <script>
-//     var swa = {
-//         pubToken: '9ed7c528-3b87-40e4-968d-269bd3447ec3	',
-//         baseUrl: 'https://events-integration.cfapps.sap.hana.ondemand.com/tracker/',
-//         owner: 'annonymityFalse',
-        
-//         //set this to a function that returns the identifier of the tracked user
-//     };
-//     (function(){
-//         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-//         g.type='text/javascript'; g.defer=true; g.async=true; g.src='./track.js';
-//         s.parentNode.insertBefore(g,s);
-//      })();
-// </script>
-// <script>
-//     var swa = {
-//         pubToken: '156848e5-5b91-42e1-b630-8893c2ff2007',
-//         baseUrl: 'https://swaqe-tracker.cfapps.sap.hana.ondemand.com/tracker/',
-//         owner: 'nipun', 
-//         //set this to a function that returns the identifier of the tracked user
-//     };
-//     (function(){
-//         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-//         g.type='text/javascript'; g.defer=true; g.async=true; g.src='./track.js';
-//         s.parentNode.insertBefore(g,s);
-//      })();
-// </script>
 </head>
 
 <body class="sapUiBody" id="content">
-	<div data-sap-ui-component
-		data-name="sap.tnt.sample.SideNavigation"
-		data-height="100%"
-		data-id="container"
-		data-settings='{"id" : "sap.tnt.sample.SideNavigation"}'
-		style="height: 100%">
+	<div data-sap-ui-component data-name="sap.tnt.sample.SideNavigation" data-height="100%" data-id="container"
+		data-settings='{"id" : "sap.tnt.sample.SideNavigation"}' style="height: 100%">
 	</div>
 </body>
+
 </html>
